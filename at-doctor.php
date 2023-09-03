@@ -20,11 +20,7 @@ if ($temp < 37.7) {
     echo "\n <p style=\"color: gold;\">$temp °C - щось нездужає…</p> \n";
 } elseif ($temp > 37.7) {
     echo "\n <p style=\"color: red;\">$temp °C - хворий!</p> \n";
-} else {
-    echo "\n <p>$temp °C</p> \n";
 }
-
-
 
 $end = <<<EOD
 </body>
