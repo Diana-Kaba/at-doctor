@@ -1,5 +1,5 @@
 <?php
-$temp = rand(350, 420)/10;
+$temp = rand(350, 420) / 10;
 
 $start = <<<EOD
 <!DOCTYPE html>
@@ -14,13 +14,17 @@ $start = <<<EOD
 EOD;
 echo $start;
 
-if ($temp < 37.7) {
-    echo "\n <p style=\"color: lightgreen;\">$temp °C - здоров!</p> \n";
-} elseif ($temp === 37.7) {
-    echo "\n <p style=\"color: gold;\">$temp °C - щось нездужає…</p> \n";
-} elseif ($temp > 37.7) {
-    echo "\n <p style=\"color: red;\">$temp °C - хворий!</p> \n";
-}
+// if ($temp < 37.7) {
+//     echo "\n <p style=\"color: lightgreen;\">$temp °C - здоров!</p> \n";
+// } elseif ($temp === 37.7) {
+//     echo "\n <p style=\"color: gold;\">$temp °C - щось нездужає…</p> \n";
+// } elseif ($temp > 37.7) {
+//     echo "\n <p style=\"color: red;\">$temp °C - хворий!</p> \n";
+// }
+
+$result = ($temp < 37.7) ? "\n <p style=\"color: lightgreen;\">$temp °C - здоров!</p> \n" : (($temp === 37.7) ? "\n <p style=\"color: gold;\">$temp °C - щось нездужає…</p> \n" : "\n <p style=\"color: red;\">$temp °C - хворий!</p> \n");
+
+echo $result;
 
 $end = <<<EOD
 </body>
